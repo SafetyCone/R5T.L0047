@@ -18,13 +18,13 @@ namespace R5T.L0047.O001
         public async Task In_SolutionContext_N001(
             ILocalRepositoryContext localGitRepositoryContext,
             ISolutionName solutionName,
-            params Func<L0039.N001.ISolutionContext, Task>[] operations)
+            params Func<L0039.T000.N001.ISolutionContext, Task>[] operations)
         {
             var solutionDirectoryPath = Instances.RepositoryPathsOperator.GetSourceDirectoryPath(
                 localGitRepositoryContext.DirectoryPath.Value)
                 .ToSolutionDirectoryPath();
 
-            var solutionContext = new L0039.N001.SolutionContext
+            var solutionContext = new L0039.T000.N001.SolutionContext
             {
                 SolutionName = solutionName,
                 DirectoryPath = solutionDirectoryPath,

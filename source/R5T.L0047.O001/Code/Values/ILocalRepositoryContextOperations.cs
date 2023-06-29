@@ -17,7 +17,7 @@ namespace R5T.L0047.O001
     {
         public Func<ILocalRepositoryContext, Task> In_SolutionContext_N001(
             ISolutionName solutionName,
-            params Func<L0039.N001.ISolutionContext, Task>[] operations)
+            params Func<L0039.T000.N001.ISolutionContext, Task>[] operations)
             =>
                 context => Instances.LocalRepositoryContextOperator.In_SolutionContext_N001(
                     context,
