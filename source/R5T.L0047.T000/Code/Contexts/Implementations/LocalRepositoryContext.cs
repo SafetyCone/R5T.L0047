@@ -10,8 +10,8 @@ namespace R5T.L0047.T000
 {
     /// <inheritdoc cref="ILocalGitRepositoryContext"/>
     [ContextImplementationMarker]
-    public class LocalGitRepositoryContext : IContextImplementationMarker,
-        ILocalGitRepositoryContext
+    public class LocalRepositoryContext : IContextImplementationMarker,
+        ILocalRepositoryContext
     {
         public ILocalGitRepositoryDirectoryPath DirectoryPath { get; set; }
         public IRepositoryName RepositoryName { get; set; }

@@ -14,6 +14,7 @@ namespace R5T.L0047.O001
         public Func<ILocalGitRepositoryContext, Task> Delete_Repository =>
             context => Instances.LocalGitRepositoryContextOperator.Delete_LocalDirectory(context);
 
+        /// <inheritdoc cref="ILocalGitRepositoryContextOperator.Add_GitIgnoreFile(ILocalGitRepositoryContext)"/>
         public Func<ILocalGitRepositoryContext, Task> Add_GitIgnoreFile =>
             context => Instances.LocalGitRepositoryContextOperator.Add_GitIgnoreFile(context);
 

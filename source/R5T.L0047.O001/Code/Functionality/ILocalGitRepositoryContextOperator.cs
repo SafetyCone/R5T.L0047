@@ -11,6 +11,7 @@ namespace R5T.L0047.O001
     [FunctionalityMarker]
     public partial interface ILocalGitRepositoryContextOperator : IFunctionalityMarker
     {
+        /// <inheritdoc cref="F0042.F002.IRepositoryFilesOperator.Set_GitIgnoreFile(string)"/>
         public Task Add_GitIgnoreFile(ILocalGitRepositoryContext context)
         {
             Instances.RepositoryFilesOperator.Set_GitIgnoreFile(
