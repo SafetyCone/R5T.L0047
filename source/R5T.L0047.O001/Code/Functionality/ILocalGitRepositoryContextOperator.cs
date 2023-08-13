@@ -14,6 +14,8 @@ namespace R5T.L0047.O001
         /// <inheritdoc cref="F0042.F002.IRepositoryFilesOperator.Set_GitIgnoreFile(string)"/>
         public Task Add_GitIgnoreFile(ILocalGitRepositoryContext context)
         {
+            context.TextOutput.WriteInformation("Adding gitignore file...");
+
             Instances.RepositoryFilesOperator.Set_GitIgnoreFile(
                 context.DirectoryPath.Value);
 
@@ -22,6 +24,8 @@ namespace R5T.L0047.O001
 
         public Task Delete_LocalDirectory(ILocalGitRepositoryContext context)
         {
+            context.TextOutput.WriteInformation("Deleting local Git repository...");
+
             Instances.LocalRepositoryOperator.Delete(
                 context.DirectoryPath.Value);
 
@@ -34,6 +38,8 @@ namespace R5T.L0047.O001
             params Func<TLocalGitHubRepsitoryContext, Task>[] operations)
             where TLocalGitHubRepsitoryContext : ILocalGitRepositoryContext
         {
+            context.TextOutput.WriteInformation($"In commit context:\n\t{commitMessage}");
+
             await Instances.ActionOperator.Run(
                 context,
                 operations);
@@ -41,7 +47,9 @@ namespace R5T.L0047.O001
             Instances.GitHubOperator.PushAllChanges(
                 context.DirectoryPath.Value,
                 commitMessage.Value,
-                Instances.LoggingOperator.GetNullLogger());
+                Instances.LoggingOperator.Get_NullLogger());
+
+            context.TextOutput.WriteInformation($"Commited changes:\n\t{commitMessage}");
         }
     }
 }

@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-
+using LibGit2Sharp;
 using R5T.L0039.T000;
 using R5T.L0047.T000;
 using R5T.T0132;
@@ -52,6 +52,7 @@ namespace R5T.L0047.O001
             {
                 SolutionName = solutionName,
                 SolutionFilePath = solutionFilePath,
+                TextOutput = localRepositoryContext.TextOutput,
             };
 
             await Instances.ActionOperator.Run(
