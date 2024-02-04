@@ -45,7 +45,7 @@ namespace R5T.L0047.O001
 
         public Task<IRepositoryUrl> Get_RepositoryUrl(T000.N001.ILocalRepositoryContext context)
         {
-            var repositoryUrlString = Instances.GitOperator.GetRepositoryRemoteUrl(
+            var repositoryUrlString = Instances.GitOperator.Get_RepositoryRemoteUrl(
                 context.DirectoryPath.Value);
 
             var repositoryUrl = repositoryUrlString.ToRepositoryUrl();

@@ -7,7 +7,7 @@ namespace R5T.L0047.O001
     {
         public static F0000.IActionOperator ActionOperator => F0000.ActionOperator.Instance;
         public static F0041.IGitHubOperator GitHubOperator => F0041.GitHubOperator.Instance;
-        public static F0019.IGitOperator GitOperator => F0019.GitOperator.Instance;
+        public static L0083.F001.IGitOperator GitOperator => L0083.F001.GitOperator.Instance;
         public static ILocalGitRepositoryContextOperator LocalGitRepositoryContextOperator => O001.LocalGitRepositoryContextOperator.Instance;
         public static ILocalRepositoryContextOperations LocalRepositoryContextOperations => O001.LocalRepositoryContextOperations.Instance;
         public static ILocalRepositoryContextOperator LocalRepositoryContextOperator => O001.LocalRepositoryContextOperator.Instance;
